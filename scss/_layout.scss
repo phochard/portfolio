@@ -1,0 +1,61 @@
+// Contient le CSS propre à la disposition (header, footer..)
+* {
+    font-family: 'Cabin Sketch', cursive;
+    color: $font-color;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.76);
+    box-sizing: border-box;
+}
+
+body {
+    opacity: 0;
+    transition: opacity linear 1s;
+    background-color: $color-primary;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__navtop {
+        display: flex;
+        width: 100%;
+    }
+    &__navbottom {
+        text-align: center;
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    &__about,
+    &__experience,
+    &__formation,
+    &__skills,
+    &__projects,
+    &__contact {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+    }
+    &__boxcolor {
+        background-color: $box-color;
+        border-radius: 3%;
+    }
+    &__borderbox {
+        border: 1px solid $border-color;
+    }
+}
+
+.background__img {
+    background-color: $background-image;
+    border: 1px solid $border-color;
+    border-radius: 5px;
+}
+
+.footer {
+    background-color: $footer-nav-color;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+}

@@ -1,0 +1,181 @@
+/* Contient tous les éléments réutilisables comme les boutons,blocks BEM,etc .*/
+
+.header {
+    &__logo {
+        height: 100%;
+    }
+    &__title {
+        width: 100%;
+        font-family: 'Homemade Apple', cursive;
+        font-size: 1rem;
+        color: $font-color;
+        background-color: $footer-nav-color;
+        text-shadow: 1px 1px rgba(0, 0, 0, 0.25);
+    }
+    &__menu {
+        width: 100%;
+        font-family: 'Homemade Apple', cursive;
+        font-size: 1rem;
+        color: $font-color;
+        background-color: $footer-nav-color;
+        text-shadow: 1px 1px rgba(0, 0, 0, 0.25);
+        &:hover {
+            font-size: 1.1rem;
+        }
+        &--dropdown {
+            justify-content: space-between;
+            height: 100%;
+            background-color: $border-color;
+            color: $font-color;
+            border: 1px solid $border-color;
+            padding: 0 20px;
+        }
+        &__item {
+            color: $font-color;
+            font-family: 'Homemade Apple', cursive;
+            text-shadow: 1px 1px rgba(0, 0, 0, 0.25);
+            font-size: 0.8rem;
+            &:hover {
+                text-decoration: none;
+                font-size: 0.9rem;
+                background-color: $border-color;
+                color: $font-color;
+            }
+        }
+    }
+}
+
+.container {
+    &__title {
+        font-family: 'Finger Paint', cursive;
+        color: $font-color;
+        text-shadow: 1px 1px rgba(0, 0, 0, 0.76);
+        font-size: 1.2rem;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    &__subtitle {
+        font-family: 'Homemade Apple', cursive;
+        color: $font-color-subtitle;
+        text-shadow: none;
+    }
+    &__buttonpage {
+        background-color: $footer-nav-color;
+        border: 1px solid $border-color;
+        color: $font-color;
+        align-items: center;
+        float: right;
+    }
+    &__list {
+        list-style-type: none;
+        display: inline-flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: center;
+        width: 100%;
+    }
+    &__img {
+        margin: 5px;
+        height: 40px;
+    }
+    &__break {
+        border: 5px solid $footer-nav-color;
+        background-color: $footer-nav-color;
+        border-radius: 5px;
+        width: 60%;
+        font-family: 'Homemade Apple', cursive;
+        font-size: 1rem;
+        color: $font-color;
+    }
+}
+
+.about {
+    &__img {
+        filter: opacity(75%);
+        border-radius: 50%;
+        width: 50%;
+        align-self: center;
+    }
+    &__text {
+        text-align: center;
+    }
+    &__hobbies {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        &__text {
+            font-size: 0.4rem;
+        }
+        &--zoom {
+            transition: 0.3s ease-in-out;
+            &:hover {
+                transform: scale(1.3);
+                transition: 0.3s ease-in-out;
+            }
+        }
+    }
+}
+
+.projects {
+    &__content {
+        border: 1px solid $border-color;
+    }
+    &__color {
+        background-color: $footer-nav-color;
+    }
+}
+
+.formation,
+.experience {
+    &__item {
+        list-style-type: none;
+        &::before {
+            content: "∞";
+            padding-right: 8px;
+            color: $footer-nav-color;
+        }
+    }
+}
+
+.form {
+    &__input {
+        width: 100%;
+    }
+    &__button {
+        color: $font-color;
+        text-align: center;
+        text-decoration: none;
+        background-color: $footer-nav-color;
+        border: 1px solid $border-color;
+        text-align: center;
+        width: 100%;
+    }
+    &__label {
+        display: inline-block;
+        width: auto;
+        text-align: right;
+    }
+    &__input,
+    &__textarea {
+        font-size: 0.5rem;
+        border: 1px solid $border-color;
+    }
+}
+
+.footer {
+    &__text {
+        font-size: 0.8rem;
+        text-shadow: 1px 1px rgba(0, 0, 0, 0.76);
+        text-align: center;
+    }
+    &__button {
+        color: $font-color;
+        text-align: center;
+        text-decoration: none;
+        text-align: center;
+        &:hover {
+            color: $font-color;
+            text-decoration: none;
+        }
+    }
+}
