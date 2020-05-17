@@ -58,4 +58,8 @@ body {
     justify-content: space-between;
     display: flex;
     flex-direction: row;
+    &__link {
+        display: flex;
+        justify-content: center;
+    }
 }

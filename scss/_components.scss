@@ -79,10 +79,12 @@
         height: 40px;
     }
     &__break {
+        display: flex;
+        align-self: center;
         border: 5px solid $footer-nav-color;
         background-color: $footer-nav-color;
         border-radius: 5px;
-        width: 60%;
+        width: 50%;
         font-family: 'Homemade Apple', cursive;
         font-size: 1rem;
         color: $font-color;
@@ -122,6 +124,12 @@
     }
     &__color {
         background-color: $footer-nav-color;
+    }
+    &__logo {
+        width: 100px;
+    }
+    &__text {
+        text-align: center;
     }
 }
 
