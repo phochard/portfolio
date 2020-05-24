@@ -2,8 +2,12 @@
 * {
     font-family: 'Cabin Sketch', cursive;
     color: $font-color;
-    text-shadow: 1px 1px rgba(0, 0, 0, 0.76);
+    text-shadow: $text-shadow;
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -37,6 +41,14 @@ body {
         display: flex;
         flex-direction: column;
         align-content: center;
+        text-align: center;
+        font-size: 0.8rem;
+        @media (min-width: 569px) and (max-width: 768px) {
+            font-size: 0.9rem;
+        }
+        @media (min-width: 769px) {
+            font-size: 1rem;
+        }
     }
     &__boxcolor {
         background-color: $box-color;
@@ -44,6 +56,9 @@ body {
     }
     &__borderbox {
         border: 1px solid $border-color;
+    }
+    &__row {
+        justify-content: center;
     }
 }
 
@@ -55,9 +70,6 @@ body {
 
 .footer {
     background-color: $footer-nav-color;
-    justify-content: space-between;
-    display: flex;
-    flex-direction: row;
     &__link {
         display: flex;
         justify-content: center;

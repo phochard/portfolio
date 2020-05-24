@@ -2,7 +2,12 @@
 
 .header {
     &__logo {
-        height: 100%;
+        &__lien {
+            height: auto;
+        }
+        &__img {
+            height: auto;
+        }
     }
     &__title {
         width: 100%;
@@ -10,17 +15,20 @@
         font-size: 1rem;
         color: $font-color;
         background-color: $footer-nav-color;
-        text-shadow: 1px 1px rgba(0, 0, 0, 0.25);
+        text-shadow: $text-shadow;
     }
     &__menu {
+        color: $font-color !important;
         width: 100%;
         font-family: 'Homemade Apple', cursive;
         font-size: 1rem;
-        color: $font-color;
         background-color: $footer-nav-color;
-        text-shadow: 1px 1px rgba(0, 0, 0, 0.25);
+        text-shadow: $text-shadow;
         &:hover {
             font-size: 1.1rem;
+        }
+        &__main_item {
+            width: 190px;
         }
         &--dropdown {
             justify-content: space-between;
@@ -33,7 +41,7 @@
         &__item {
             color: $font-color;
             font-family: 'Homemade Apple', cursive;
-            text-shadow: 1px 1px rgba(0, 0, 0, 0.25);
+            text-shadow: $text-shadow;
             font-size: 0.8rem;
             &:hover {
                 text-decoration: none;
@@ -49,15 +57,28 @@
     &__title {
         font-family: 'Finger Paint', cursive;
         color: $font-color;
-        text-shadow: 1px 1px rgba(0, 0, 0, 0.76);
+        text-shadow: $text-shadow;
         font-size: 1.2rem;
         text-align: center;
         box-sizing: border-box;
+        @media (min-width: 569px) and (max-width: 768px) {
+            font-size: 1.6rem;
+        }
+        @media (min-width: 769px) {
+            font-size: 2rem;
+        }
     }
     &__subtitle {
         font-family: 'Homemade Apple', cursive;
         color: $font-color-subtitle;
         text-shadow: none;
+        font-size: 0.8rem;
+        @media (min-width: 569px) and (max-width: 768px) {
+            font-size: 1rem;
+        }
+        @media (min-width: 769px) {
+            font-size: 1.2rem;
+        }
     }
     &__buttonpage {
         background-color: $footer-nav-color;
@@ -65,29 +86,50 @@
         color: $font-color;
         align-items: center;
         float: right;
+        bottom: 0;
+        text-decoration: none;
+        &:hover {
+            color: $font-color;
+            text-decoration: none;
+        }
     }
     &__list {
         list-style-type: none;
-        display: inline-flex;
-        flex-wrap: wrap;
         justify-content: space-around;
         align-content: center;
         width: 100%;
     }
     &__img {
-        margin: 5px;
-        height: 40px;
+        margin: auto;
+        height: 50px;
+        @media (min-width: 569px) and (max-width: 768px) {
+            height: 80px;
+        }
+        @media (min-width: 769px) {
+            height: 90px;
+        }
     }
     &__break {
-        display: flex;
-        align-self: center;
-        border: 5px solid $footer-nav-color;
+        margin-bottom: 20px;
+        text-align: center;
         background-color: $footer-nav-color;
         border-radius: 5px;
-        width: 50%;
-        font-family: 'Homemade Apple', cursive;
-        font-size: 1rem;
-        color: $font-color;
+        border-style: initial;
+        border: 1px solid $border-color;
+        height: 40px;
+        height: 40px;
+        @media (min-width: 569px) and (max-width: 768px) {
+            font-size: 1rem;
+        }
+        @media (min-width: 769px) {
+            font-size: 1.2rem;
+        }
+        &:hover {
+            font-size: 1.1rem;
+        }
+    }
+    &--invisible {
+        display: none;
     }
 }
 
@@ -95,24 +137,49 @@
     &__img {
         filter: opacity(75%);
         border-radius: 50%;
-        width: 50%;
         align-self: center;
+        height: 200px;
+        width: auto;
+        @media (min-width: 569px) and (max-width: 768px) {
+            height: 250px;
+        }
+        @media (min-width: 769px) {
+            height: 300px;
+        }
     }
     &__text {
-        text-align: center;
-    }
-    &__hobbies {
         display: flex;
-        justify-content: space-around;
-        width: 100%;
+        align-items: center;
+    }
+    &__infos {
+        text-align: center;
+        width: 100px;
+        @media (min-width: 569px) and (max-width: 768px) {
+            width: 150px;
+        }
+        @media (min-width: 769px) {
+            width: 200px;
+        }
         &__text {
             font-size: 0.4rem;
+            @media (min-width: 569px) and (max-width: 768px) {
+                font-size: 0.8rem;
+            }
+            @media (min-width: 769px) {
+                font-size: 1.2rem;
+            }
         }
         &--zoom {
             transition: 0.3s ease-in-out;
             &:hover {
                 transform: scale(1.3);
                 transition: 0.3s ease-in-out;
+                @media (min-width: 569px) and (max-width: 768px) {
+                    transform: scale(1.2);
+                }
+                @media (min-width: 769px) {
+                    transform: scale(1.05);
+                }
             }
         }
     }
@@ -127,6 +194,9 @@
     }
     &__logo {
         width: 100px;
+        @media (min-width: 321px) and (max-width: 1024px) {
+            width: 150px;
+        }
     }
     &__text {
         text-align: center;
@@ -135,6 +205,9 @@
 
 .formation,
 .experience {
+    &__list {
+        text-align: center;
+    }
     &__item {
         list-style-type: none;
         &::before {
@@ -145,17 +218,36 @@
     }
 }
 
+.projects {
+    &__content {
+        border: 1px solid $border-color;
+    }
+    &__color {
+        background-color: $footer-nav-color;
+    }
+    &__logo {
+        width: 100px;
+        @media (min-width: 321px) and (max-width: 1024px) {
+            width: 150px;
+        }
+    }
+    &__text {
+        text-align: center;
+    }
+}
+
 .form {
     &__input {
         width: 100%;
     }
     &__button {
+        display: flex;
+        justify-items: center;
         color: $font-color;
         text-align: center;
         text-decoration: none;
         background-color: $footer-nav-color;
         border: 1px solid $border-color;
-        text-align: center;
         width: 100%;
     }
     &__label {
@@ -165,16 +257,27 @@
     }
     &__input,
     &__textarea {
-        font-size: 0.5rem;
+        font-size: 1rem;
         border: 1px solid $border-color;
+        background-color: $color-primary;
+        color: gray;
+    }
+    &__input {
+        height: 50px;
     }
 }
 
 .footer {
     &__text {
-        font-size: 0.8rem;
-        text-shadow: 1px 1px rgba(0, 0, 0, 0.76);
+        font-size: 0.6rem;
+        text-shadow: $text-shadow;
         text-align: center;
+        @media (min-width: 569px) and (max-width: 768px) {
+            font-size: 0.7rem;
+        }
+        @media (min-width: 769px) {
+            font-size: 0.8rem;
+        }
     }
     &__button {
         color: $font-color;
