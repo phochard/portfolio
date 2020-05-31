@@ -1,196 +1,257 @@
-    /* Contient tous les éléments réutilisables comme les boutons,blocks BEM,etc .*/
-    
-    .header {
-        &__logo {
-            &__lien {
-                height: auto;
+        /* Contient tous les éléments réutilisables comme les boutons,blocks BEM,etc .*/
+        
+        .header {
+            &__logo {
+                &__lien {
+                    height: auto;
+                }
+                &__img {
+                    height: auto;
+                }
             }
-            &__img {
-                height: auto;
-            }
-        }
-        &__title {
-            width: 100%;
-            font-family: 'Homemade Apple', cursive;
-            font-size: 1rem;
-            color: $font-color;
-            background-color: $footer-nav-color;
-            text-shadow: $text-shadow;
-        }
-        &__menu {
-            color: $font-color !important;
-            width: 100%;
-            height: auto;
-            font-family: 'Homemade Apple', cursive;
-            font-size: 1rem;
-            background-color: $footer-nav-color;
-            text-shadow: $text-shadow;
-            &:hover {
-                font-size: 1.1rem;
-            }
-            &__main_item {
-                width: 190px;
-            }
-            &--dropdown {
-                justify-content: space-between;
-                height: 100%;
-                background-color: $border-color;
-                color: $font-color;
-                border: 1px solid $border-color;
-                padding: 0 20px;
-            }
-            &__item {
-                color: $font-color;
+            &__title {
+                width: 100%;
                 font-family: 'Homemade Apple', cursive;
+                font-size: 1rem;
+                color: $font-color;
+                background-color: $footer-nav-color;
                 text-shadow: $text-shadow;
-                font-size: 0.8rem;
-                &:hover {
-                    text-decoration: none;
-                    font-size: 0.9rem;
+            }
+            &__menu {
+                color: $font-color !important;
+                width: 100%;
+                height: auto;
+                font-family: 'Homemade Apple', cursive;
+                font-size: 1rem;
+                background-color: $footer-nav-color;
+                text-shadow: $text-shadow;
+                &__text {
+                    &:hover {
+                        font-size: 1.1rem;
+                    }
+                }
+                &__main_item {
+                    width: 190px;
+                }
+                &--dropdown {
+                    justify-content: space-between;
+                    height: 100%;
                     background-color: $border-color;
                     color: $font-color;
+                    border: 1px solid $border-color;
+                    padding: 0 20px;
+                }
+                &__item {
+                    color: $font-color;
+                    font-family: 'Homemade Apple', cursive;
+                    text-shadow: $text-shadow;
+                    font-size: 0.8rem;
+                    &:hover {
+                        text-decoration: none;
+                        font-size: 0.9rem;
+                        background-color: $border-color;
+                        color: $font-color;
+                    }
                 }
             }
         }
-    }
-    
-    .container {
-        &__title {
-            font-family: 'Finger Paint', cursive;
-            color: $font-color;
-            text-shadow: $text-shadow;
-            font-size: 1.2rem;
-            text-align: center;
-            box-sizing: border-box;
-            @media (min-width: 569px) and (max-width: 768px) {
-                font-size: 1.6rem;
-            }
-            @media (min-width: 769px) {
-                font-size: 2rem;
-            }
-        }
-        &__subtitle {
-            font-family: 'Homemade Apple', cursive;
-            color: $font-color-subtitle;
-            text-shadow: none;
-            font-size: 0.8rem;
-            @media (min-width: 569px) and (max-width: 768px) {
-                font-size: 1rem;
-            }
-            @media (min-width: 769px) {
-                font-size: 1.2rem;
-            }
-        }
-        &__buttonpage {
-            position: absolute;
-            background-color: $footer-nav-color;
-            border: 1px solid $border-color;
-            color: $font-color;
-            right: 10px;
-            bottom: 10px;
-            text-decoration: none;
-            &:hover {
+        
+        .container {
+            &__title {
+                font-family: 'Finger Paint', cursive;
                 color: $font-color;
-                text-decoration: none;
-            }
-        }
-        &__list {
-            list-style-type: none;
-            justify-content: space-around;
-            align-content: center;
-            &__skills {
-                list-style-type: none;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-        &__img {
-            margin: auto;
-            height: 40px;
-            @media (min-width: 569px) and (max-width: 768px) {
-                height: 80px;
-            }
-            @media (min-width: 769px) {
-                height: 90px;
-            }
-            &__skills {
-                float: left;
-                margin: 0;
-                height: 20px;
+                text-shadow: $text-shadow;
+                font-size: 1.2rem;
+                text-align: center;
+                box-sizing: border-box;
                 @media (min-width: 569px) and (max-width: 768px) {
-                    height: 30px;
+                    font-size: 1.6rem;
                 }
                 @media (min-width: 769px) {
-                    height: 40px;
+                    font-size: 2rem;
                 }
             }
-        }
-        &__break {
-            display: flex;
-            justify-content: center;
-            text-align: center;
-            background-color: $footer-nav-color;
-            border-radius: 5px;
-            border-style: initial;
-            border: 1px solid $border-color;
-            height: 40px;
-            font-size: 0.8rem;
-            &:hover {
-                font-size: 0.9rem;
-            }
-            @media (min-width: 569px) and (max-width: 768px) {
-                font-size: 1rem;
-                &:hover {
-                    font-size: 1.1rem;
+            &__subtitle {
+                font-family: 'Homemade Apple', cursive;
+                color: $font-color-subtitle;
+                text-shadow: none;
+                font-size: 0.8rem;
+                @media (min-width: 569px) and (max-width: 768px) {
+                    font-size: 1rem;
+                }
+                @media (min-width: 769px) {
+                    font-size: 1.2rem;
                 }
             }
-            @media (min-width: 769px) {
-                font-size: 1.2rem;
-                &:hover {
-                    font-size: 1.3rem;
-                }
-            }
-        }
-        &--invisible {
-            display: none;
-        }
-    }
-    
-    .about {
-        &__img {
-            filter: opacity(75%);
-            border-radius: 50%;
-            align-self: center;
-            height: 100%;
-            width: auto;
-            @media (min-width: 569px) and (max-width: 768px) {
-                height: 250px;
-            }
-            @media (min-width: 769px) {
-                height: 300px;
-            }
-        }
-        &__text {
-            &__link {
+            &__buttonpage {
+                position: absolute;
+                background-color: $footer-nav-color;
+                border: 1px solid $border-color;
                 color: $font-color;
+                right: 10px;
+                bottom: 10px;
                 text-decoration: none;
                 &:hover {
-                    color: $font-color-subtitle;
+                    color: $font-color;
                     text-decoration: none;
                 }
             }
-        }
-        &__infos {
-            text-align: center;
-            width: 100px;
-            @media (min-width: 569px) and (max-width: 768px) {
-                width: 150px;
+            &__list {
+                list-style-type: none;
+                justify-content: space-around;
+                align-content: center;
+                &__skills {
+                    list-style-type: none;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
             }
-            @media (min-width: 769px) {
-                width: 200px;
+            &__img {
+                margin: auto;
+                height: 40px;
+                @media (min-width: 569px) and (max-width: 768px) {
+                    height: 80px;
+                }
+                @media (min-width: 769px) {
+                    height: 90px;
+                }
+                &__skills {
+                    float: left;
+                    margin: 0;
+                    height: 20px;
+                    @media (min-width: 569px) and (max-width: 768px) {
+                        height: 30px;
+                    }
+                    @media (min-width: 769px) {
+                        height: 40px;
+                    }
+                }
+            }
+            &__break {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                background-color: $footer-nav-color;
+                border-radius: 5px;
+                border-style: initial;
+                border: 1px solid $border-color;
+                height: 40px;
+                font-size: 0.8rem;
+                position: relative;
+                &:hover {
+                    font-size: 0.9rem;
+                }
+                &__chevron {
+                    color: white;
+                    position: absolute;
+                    right: 10px;
+                    &--rotate {
+                        transition: all 2s linear;
+                        &--down {
+                            transform: rotate(180deg);
+                        }
+                    }
+                }
+                @media (min-width: 569px) and (max-width: 768px) {
+                    font-size: 1rem;
+                    &:hover {
+                        font-size: 1.1rem;
+                    }
+                }
+                @media (min-width: 769px) {
+                    font-size: 1.2rem;
+                    &:hover {
+                        font-size: 1.3rem;
+                    }
+                }
+            }
+            &--invisible {
+                display: none;
+            }
+        }
+        
+        .about {
+            &__img {
+                filter: opacity(75%);
+                border-radius: 50%;
+                align-self: center;
+                height: 100%;
+                width: auto;
+                @media (min-width: 569px) and (max-width: 768px) {
+                    height: 250px;
+                }
+                @media (min-width: 769px) {
+                    height: 300px;
+                }
             }
             &__text {
+                &__link {
+                    color: $font-color;
+                    text-decoration: none;
+                    &:hover {
+                        color: $font-color-subtitle;
+                        text-decoration: none;
+                    }
+                }
+            }
+            &__infos {
+                text-align: center;
+                width: 100px;
+                @media (min-width: 569px) and (max-width: 768px) {
+                    width: 150px;
+                }
+                @media (min-width: 769px) {
+                    width: 200px;
+                }
+                &__text {
+                    font-size: 0.6rem;
+                    @media (min-width: 569px) and (max-width: 768px) {
+                        font-size: 0.8rem;
+                    }
+                    @media (min-width: 769px) {
+                        font-size: 1.2rem;
+                    }
+                }
+                &--zoom {
+                    transition: 0.3s ease-in-out;
+                    &:hover {
+                        transform: scale(1.3);
+                        transition: 0.3s ease-in-out;
+                        @media (min-width: 569px) and (max-width: 768px) {
+                            transform: scale(1.2);
+                        }
+                        @media (min-width: 769px) {
+                            transform: scale(1.05);
+                        }
+                    }
+                }
+            }
+        }
+        
+        .projects {
+            &__content {
+                border: 1px solid $border-color;
+            }
+            &__color {
+                background-color: $footer-nav-color;
+            }
+            &__logo {
+                height: auto;
+                width: 100px;
+                border: 1px solid $border-color;
+                @media (min-width: 569px) and (max-width: 768px) {
+                    width: 220px;
+                    height: auto;
+                }
+                @media (min-width: 769px) {
+                    width: 350px;
+                    height: auto;
+                }
+            }
+            &__text {
+                text-align: center;
                 font-size: 0.6rem;
                 @media (min-width: 569px) and (max-width: 768px) {
                     font-size: 0.8rem;
@@ -199,145 +260,99 @@
                     font-size: 1.2rem;
                 }
             }
-            &--zoom {
+        }
+        
+        .formation,
+        .experience {
+            &__list {
+                text-align: center;
+            }
+            &__item {
+                list-style-type: none;
+                &::before {
+                    content: "∞";
+                    padding-right: 8px;
+                    color: $footer-nav-color;
+                }
+            }
+        }
+        
+        .projects {
+            &__content {
+                border: 1px solid $border-color;
+            }
+            &__color {
+                background-color: $footer-nav-color;
+            }
+            &__logo {
+                width: 100px;
+                @media (min-width: 321px) and (max-width: 1024px) {
+                    width: 150px;
+                }
+            }
+            &__text {
+                text-align: center;
+            }
+        }
+        
+        .form {
+            &__input {
+                width: 100%;
+            }
+            &__button {
+                display: flex;
+                justify-items: center;
+                color: $font-color;
+                text-align: center;
+                text-decoration: none;
+                background-color: $footer-nav-color;
+                border: 1px solid $border-color;
+                width: 100%;
+            }
+            &__label {
+                display: inline-block;
+                width: auto;
+                text-align: right;
+            }
+            &__input,
+            &__textarea {
+                font-size: 1rem;
+                border: 1px solid $border-color;
+                background-color: $color-primary;
+                color: gray;
+            }
+            &__input {
+                height: 50px;
+            }
+        }
+        
+        .footer {
+            &__text {
+                font-size: 0.6rem;
+                text-shadow: $text-shadow;
+                text-align: center;
+                @media (min-width: 569px) and (max-width: 768px) {
+                    font-size: 0.7rem;
+                }
+                @media (min-width: 769px) {
+                    font-size: 0.8rem;
+                }
+            }
+            &__button {
+                color: $font-color;
+                text-align: center;
+                text-decoration: none;
+                text-align: center;
+                &:hover {
+                    color: $font-color;
+                    text-decoration: none;
+                }
+            }
+            &--link {
                 transition: 0.3s ease-in-out;
                 &:hover {
                     transform: scale(1.3);
                     transition: 0.3s ease-in-out;
-                    @media (min-width: 569px) and (max-width: 768px) {
-                        transform: scale(1.2);
-                    }
-                    @media (min-width: 769px) {
-                        transform: scale(1.05);
-                    }
                 }
             }
         }
-    }
-    
-    .projects {
-        &__content {
-            border: 1px solid $border-color;
-        }
-        &__color {
-            background-color: $footer-nav-color;
-        }
-        &__logo {
-            height: auto;
-            width: 100px;
-            border: 1px solid $border-color;
-            @media (min-width: 569px) and (max-width: 768px) {
-                width: 220px;
-                height: auto;
-            }
-            @media (min-width: 769px) {
-                width: 350px;
-                height: auto;
-            }
-        }
-        &__text {
-            text-align: center;
-            font-size: 0.6rem;
-            @media (min-width: 569px) and (max-width: 768px) {
-                font-size: 0.8rem;
-            }
-            @media (min-width: 769px) {
-                font-size: 1.2rem;
-            }
-        }
-    }
-    
-    .formation,
-    .experience {
-        &__list {
-            text-align: center;
-        }
-        &__item {
-            list-style-type: none;
-            &::before {
-                content: "∞";
-                padding-right: 8px;
-                color: $footer-nav-color;
-            }
-        }
-    }
-    
-    .projects {
-        &__content {
-            border: 1px solid $border-color;
-        }
-        &__color {
-            background-color: $footer-nav-color;
-        }
-        &__logo {
-            width: 100px;
-            @media (min-width: 321px) and (max-width: 1024px) {
-                width: 150px;
-            }
-        }
-        &__text {
-            text-align: center;
-        }
-    }
-    
-    .form {
-        &__input {
-            width: 100%;
-        }
-        &__button {
-            display: flex;
-            justify-items: center;
-            color: $font-color;
-            text-align: center;
-            text-decoration: none;
-            background-color: $footer-nav-color;
-            border: 1px solid $border-color;
-            width: 100%;
-        }
-        &__label {
-            display: inline-block;
-            width: auto;
-            text-align: right;
-        }
-        &__input,
-        &__textarea {
-            font-size: 1rem;
-            border: 1px solid $border-color;
-            background-color: $color-primary;
-            color: gray;
-        }
-        &__input {
-            height: 50px;
-        }
-    }
-    
-    .footer {
-        &__text {
-            font-size: 0.6rem;
-            text-shadow: $text-shadow;
-            text-align: center;
-            @media (min-width: 569px) and (max-width: 768px) {
-                font-size: 0.7rem;
-            }
-            @media (min-width: 769px) {
-                font-size: 0.8rem;
-            }
-        }
-        &__button {
-            color: $font-color;
-            text-align: center;
-            text-decoration: none;
-            text-align: center;
-            &:hover {
-                color: $font-color;
-                text-decoration: none;
-            }
-        }
-        &--link {
-            transition: 0.3s ease-in-out;
-            &:hover {
-                transform: scale(1.3);
-                transition: 0.3s ease-in-out;
-            }
-        }
-    }
