@@ -1,0 +1,20 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Création d'un portfolio dans le cadre de ma formation de Développeur web/mobile.",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "dev": "node-sass scss/main.scss css/style.css",
+    "prod": "node-sass scss/main.scss css/style.css && postcss css/style.css -o css/style.css -u autoprefixer && postcss css/style.css -o css/style.css -u cssnano"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.8.0",
+    "bootstrap": "^4.5.0",
+    "cssnano": "^4.1.10",
+    "node-sass": "^4.14.1",
+    "postcss": "^7.0.30"
+  }
+}
